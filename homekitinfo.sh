@@ -3,18 +3,18 @@
 LOGFILE=logfile.txt
 USER=root
 PASSWORD=alpine
-IP=192.168.1.246
+IP=<IP OF JAILBROKEN IPHONE>
 
-#On se connecte à l'iphone et on lui passe la commande ioReg
+#Connection to iphone in SSH
 sshpass -p $PASSWORD ssh -q -o StrictHostKeyChecking=no $USER@$IP > $LOGFILE <<ENDSSH
 ioreg -l -w0| grep \"CurrentCapacity
 exit
 ENDSSH
 
-#On garde que les chiffres
+#We keep only the numbers
 sed -i 's/[^0-9]*//g' $LOGFILE
 
-#on renvoie l'info
+#Send results and purge temp file
 cat $LOGFILE
 rm $LOGFILE
 
