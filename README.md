@@ -11,7 +11,7 @@ to charge the iphone only when needed (if battery drops under 20% and is not abo
 - Cydia
 - Smart Outlet
 
-#Setup
+# Setup
 
 1) Jailbreak the iphone and install Cydia
 2) in Cydia, install the following tweaks : 
